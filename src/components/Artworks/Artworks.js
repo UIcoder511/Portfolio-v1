@@ -22,7 +22,15 @@ const Artwork = ({ src, onClick }) => (
 
 const Artworks = ({ setModal }) => {
   return (
-    <Section title="Artworks">
+    <Section
+      title="Artworks"
+      titleSx={{
+        color: "#000000aa",
+      }}
+      dividerSx={{
+        backgroundColor: "#000000aa",
+      }}
+    >
       {allDrawings.map((art, i) => (
         <Artwork src={art.url} key={i} onClick={setModal} />
       ))}

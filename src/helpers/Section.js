@@ -28,20 +28,27 @@ const BodyComp = styled("div")(({ theme }) => ({
   gap: "20px",
 }));
 
-const Section = ({ title, children, bodyStyles = {} }) => {
+const Section = ({
+  title,
+  children,
+  titleSx = {},
+  dividerSx = {},
+  bodySx = {},
+}) => {
   return (
     <SectionComp>
-      <TitleComp>{title}</TitleComp>
+      <TitleComp sx={titleSx}>{title}</TitleComp>
       <Divider
         sx={{
           //   padding: "10px",
           backgroundColor: (theme) => theme.palette.primary.main,
           height: "3px",
           margin: "10px 0px 20px 0px",
+          ...dividerSx,
         }}
       />
 
-      <BodyComp style={{ ...bodyStyles }}>{children}</BodyComp>
+      <BodyComp sx={bodySx}>{children}</BodyComp>
     </SectionComp>
   );
 };

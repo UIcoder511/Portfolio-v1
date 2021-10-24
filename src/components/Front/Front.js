@@ -17,7 +17,13 @@ const Root = styled("div")(({ theme }) => ({
   alignItems: "center",
   justifyContent: "center",
   backgroundImage: `url("${BG}")`,
-  backgroundSize: "100% 100%",
+  backgroundSize: "400% 100%",
+  [theme.breakpoints.up("sm")]: {
+    backgroundSize: "200% 100%",
+  },
+  [theme.breakpoints.up("lg")]: {
+    backgroundSize: "100% 100%",
+  },
   backgroundRepeat: "no-repeat",
   "& .text": {
     fontSize: "1.4rem",

@@ -8,6 +8,7 @@ import aw7 from "../assets/drawings/aw7.jpg";
 import aw8 from "../assets/drawings/aw8.jpg";
 import aw10 from "../assets/drawings/aw10.jpg";
 import aw11 from "../assets/drawings/aw11.jpg";
+import aw12 from "../assets/drawings/aw12.jpg";
 
 export const allDrawings = [
   { url: aw1 },
@@ -20,4 +21,5 @@ export const allDrawings = [
   { url: aw8 },
   { url: aw10 },
   { url: aw11 },
+  { url: aw12 },
 ];

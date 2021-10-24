@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./App.css";
 import Artworks from "./components/Artworks/Artworks";
+import Footer from "./components/Footer/Footer";
 import Front from "./components/Front/Front";
 import Logos from "./components/Logos/Logos";
 import Nav from "./components/Nav/Nav";
@@ -27,7 +28,7 @@ function App() {
       // }
     });
   }, []);
-  console.log("hi");
+
   return (
     // <ScrollContext.Provider value={{ isScrolled, setModal }}>
     <div className="App">
@@ -36,6 +37,7 @@ function App() {
       <Artworks setModal={setModal} />
       <Logos setModal={setModal} />
       <UIDesigns setModal={setModal} />
+      <Footer />
       <FullModal
         src={modal.src}
         open={modal.show}
